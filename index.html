@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEST Club Task</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form action="/" method="post">
+      <div class="div1" id="div1">
+        <!-- <button class = "darkmode" onclick = 'darkmode()' ><img src = "Images/dark.png"></button> -->
+        <input
+          type="button"
+          onclick="darkmode()"
+          value="DarkMode"
+          class="dark"
+          id="dark"
+        />
+        <input
+          type="button"
+          onclick="lightmode()"
+          value="LightMode"
+          class="light"
+          id="light"
+        />
+        <div class="left box" id="left">
+          <input
+            type="button"
+            value="1"
+            class="btn"
+            name="btn1"
+            onclick="changeDiv2('#ffc09f','rgba(150, 111, 242, 0.719), rgba(255, 255, 255, 0.507)', 'purple')"
+          />
+          <input
+            type="button"
+            value="2"
+            class="btn"
+            name="btn2"
+            onclick="changeDiv2('#a0ced9','#7af26fb7, rgba(255, 255, 255, 0.507)', 'lightgreen')"
+          />
+          <input
+            type="button"
+            value="3"
+            class="btn"
+            name="btn3"
+            onclick="changeDiv2('#CAF1DE','#f27c6fb7, rgba(255, 255, 255, 0.507)', 'red')"
+          />
+          <input
+            type="button"
+            value="4"
+            class="btn"
+            name="btn4"
+            onclick="changeDiv2('#F6D7E8','#f2ee6fb7, rgba(255, 255, 255, 0.507)', 'yellow')"
+          />
+         </div>
+        <div class="right box" id="div2">
+          <div class="up" id="up">
+            <input
+              type="button"
+              value="String"
+              class="button"
+              name="Button1"
+              onclick="changeContent1()"
+            />
+            <input
+              type="button"
+              value="Weather"
+              class="button"
+              name="Button2"
+              onclick="changeContent2()"
+            />
+            <input
+              type="button"
+              value="Temperature"
+              class="button"
+              name="Button3"
+              onclick="changeContent3()"
+            />
+          </div>
+          <div class="div3 down" id="div3">
+            <span class="topic">Shadow Effect</span>
+            <div id="text" contenteditable="" oninput="shadow()">Type here</div>
+            <div class="content1" style="display: none">
+              <div class="container">
+                <h1>String Poze</h1>
+                <textarea
+                  placeholder="Write some text here..."
+                  onkeyup="countLetters();"
+                ></textarea>
+                <p>Total Characters: <span class="count">0</span></p>
+                <p>Total Words: <span class="Wcount">0</span></p>
+                <p>Pallindrome: <span class="pallin"></span></p>
+                <p>Binary String: <span class="binary"></span></p>
+              </div>
+            </div>
+
+            <div class="content2" style="display: none">
+              <div>
+                <label for="cityInput">City Name: </label>
+                <input id="cityInput" type="text" name="cityName" />
+                <button type="submit" onclick="showtemp()">Go</button>
+              </div>
+              <span class="report" name="report"></span>
+            </div>
+
+            <div class="content3" style="display: none">
+              <div class="container2">
+                <table>
+                  <tr>
+                    <label>Kelvin</label>
+                    <input
+                      type="number"
+                      id="kelvin"
+                      name="kelvin"
+                      oninput="KelToCelAndFar()"
+                    />
+                  </tr>
+                  <tr>
+                    <label>Celsius</label>
+                    <input
+                      type="number"
+                      id="celsius"
+                      name="celsius"
+                      oninput="CelToKelAndFar()"
+                    />
+                  </tr>
+                  <tr>
+                    <label>Fahrenheit</label>
+                    <input
+                      type="number"
+                      id="fahren"
+                      name="fahren"
+                      oninput="FarToCelAndKel()"
+                    />
+                  </tr>
+                </table>
+                <input type="reset" class="reset" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="app.js"></script>
+    <!-- <script src="server.js"></script> -->
+  </body>
+</html>
