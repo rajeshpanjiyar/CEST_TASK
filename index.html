@@ -6,60 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CEST Club Task</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   </head>
   <body>
     <form action="/" method="post">
       <div class="div1" id="div1">
-        <!-- <button class = "darkmode" onclick = 'darkmode()' ><img src = "Images/dark.png"></button> -->
-        <input
-          type="button"
-          onclick="darkmode()"
-          value="DarkMode"
-          class="dark"
-          id="dark"
-        />
-        <input
-          type="button"
-          onclick="lightmode()"
-          value="LightMode"
-          class="light"
-          id="light"
-        />
         <div class="left box" id="left">
           <input
             type="button"
-            value="1"
+            value="Color 1"
             class="btn"
             name="btn1"
-            onclick="changeDiv2('#ffc09f','rgba(150, 111, 242, 0.719), rgba(255, 255, 255, 0.507)', 'purple')"
+            onclick="changeDiv2('#9ed2ff','#a0bffd', '#0088FF')"
           />
           <input
             type="button"
-            value="2"
+            value="Color 2"
             class="btn"
             name="btn2"
-            onclick="changeDiv2('#a0ced9','#7af26fb7, rgba(255, 255, 255, 0.507)', 'lightgreen')"
+            onclick="changeDiv2('#AEFEFF','#4FBDBA', '#35858B')"
           />
           <input
             type="button"
-            value="3"
+            value="Color 3"
             class="btn"
             name="btn3"
-            onclick="changeDiv2('#CAF1DE','#f27c6fb7, rgba(255, 255, 255, 0.507)', 'red')"
+            onclick="changeDiv2('#BAFFB4','#95CD41', 'green')"
           />
           <input
             type="button"
-            value="4"
+            value="Normal"
             class="btn"
             name="btn4"
-            onclick="changeDiv2('#F6D7E8','#f2ee6fb7, rgba(255, 255, 255, 0.507)', 'yellow')"
+            onclick="changeDiv2('#F8F9FA','#7577fa91', '#7577FA')"
           />
+
+
+          <div class="logo">
+           <img src = "/Images/CESTlogo.png">
+          </div>
+
+
+          <div class = "dateTime">
+            <p>Date:</p>
+            <span class = "date"></span>
+         <p>Time:</p>
+         <span class = "time"></span>
+        </div>
+            
          </div>
         <div class="right box" id="div2">
           <div class="up" id="up">
             <input
               type="button"
-              value="String"
+              value="String Play"
               class="button"
               name="Button1"
               onclick="changeContent1()"
@@ -79,12 +79,15 @@
               onclick="changeContent3()"
             />
           </div>
+          <br>
+          <div class = "topicCover">
+          <span class="topic">Shadow Effect</span>
+        </div>
           <div class="div3 down" id="div3">
-            <span class="topic">Shadow Effect</span>
             <div id="text" contenteditable="" oninput="shadow()">Type here</div>
             <div class="content1" style="display: none">
               <div class="container">
-                <h1>String Poze</h1>
+                <h1>String Play</h1>
                 <textarea
                   placeholder="Write some text here..."
                   onkeyup="countLetters();"
