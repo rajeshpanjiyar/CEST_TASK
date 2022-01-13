@@ -195,7 +195,11 @@ function timeDate() {
     "-" +
     today.getDate() +
     " ";
-  var hour = (today.getHours() - 12);
+  var hour = today.getHours();
+  if(hour>12)
+  {
+    hour = (today.getHours() - 12);
+  }
   var minute = today.getMinutes();
   var second = today.getSeconds();
 
